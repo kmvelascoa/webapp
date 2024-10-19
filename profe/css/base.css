@@ -150,3 +150,9 @@ p {
 .final-section a:hover {
     color: var(--accent);
 }
+
+table {
+    display: block;
+    margin: auto;
+    
+}
