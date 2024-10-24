@@ -1,0 +1,42 @@
+{
+  "name": "webapp",
+  "displayName": "webapp",
+  "description": "Una breve descripción de mi extensión.",
+  "version": "0.0.1",
+  "publisher": "mi-editor",
+  "engines": {
+    "vscode": "^1.50.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:mi-extension.comando"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "mi-extension.comando",
+        "title": "Ejecutar Mi Comando"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.0",
+    "vscode": "^1.50.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mi-usuario/mi-extension.git"
+  },
+  "keywords": [
+    "vscode",
+    "extension"
+  ]
+}
+
