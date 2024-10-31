@@ -5,6 +5,7 @@ Welcome to my static site! This project showcases Web Fundamentals.
 ## Demo
 
 You can view the live site at: ^[https://kmvelascoa.github.io/webapp/](https://kmvelascoa.github.io/webapp/)
+La práctica se puede ver en: https://kmvelascoa.github.io/webapp/practica/index.html 
 
 ## Features
 
