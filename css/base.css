@@ -6,32 +6,23 @@
   box-sizing: border-box;
 }
 
+/* Main body styling */
 body {
-  font-family: "Montserrat", sans-serif; /* Cambia a Montserrat */
+  font-family: "Montserrat", sans-serif;
   min-height: 100vh;
-  background-color: #8dab7f; /* Color claro para el fondo */
-  color: #040403; /* Texto oscuro */
+  background-color: var(--background);
+  color: var(--foreground);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-/*  When the body has display: flex;, 
-    its children (header, footer, and main) become flex items. 
-    Flex items do not expand to fill their container's width
-    unless you explicitly set their width.
-*/
-
-main {
-  width: 100%; /* Make sure it takes full width */
-  flex: 1; /* Allow it to grow within the flex container */
-}
-
+/* Header and Footer styling */
 header,
 footer {
-  background-color: #5b7553; /* Color primario */
-  color: #e2f8c0;
+  background-color: var(--primary);
+  color: var(--primary-foreground);
   padding: 20px;
   width: 100%;
 }
@@ -39,7 +30,7 @@ footer {
 header {
   margin-bottom: 30px;
   padding: 20px 40px;
-  background-color: #394032;
+  background-color: var(--secondary);
 }
 
 h1 {
@@ -53,29 +44,29 @@ h2 {
 
 h3,
 h4 {
-  color: #e2f8c0; /* Color para subtítulos */
+  color: var(--primary-foreground);
 }
 
 a {
-  color: #8eb897; /* Color de enlace */
+  color: var(--accent);
   text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline; /* Subrayar en hover */
+  text-decoration: underline;
 }
 
 article {
   margin-bottom: 40px;
-  background-color: #8dab7f; /* Fondo claro para artículos */
+  background-color: var(--card);
   padding: 20px 40px;
   border-radius: 10px;
-  color: #040403; /* Texto oscuro */
+  color: var(--card-foreground);
 }
 
 blockquote {
-  background-color: #eaeaea; /* Fondo gris para citas */
-  border-left: 10px solid #5b7553; /* Borde color primario */
+  background-color: var(--muted);
+  border-left: 10px solid var(--primary);
   margin: 20px 0;
   padding: 10px 20px;
 }
@@ -88,8 +79,8 @@ cite {
 }
 
 p {
-  font-size: 0.7em; /* Tamaño de fuente más pequeño */
-  line-height: 1.5; /* Mejora la legibilidad */
+  font-size: 0.7em;
+  line-height: 1.5;
   margin: 15px 0;
 }
 
@@ -159,5 +150,5 @@ table {
 }
 
 td:nth-child(even) {
-  background-color: #9ddbad; /* Fondo alternativo */
+  background-color: var(--accent); /* #9DDBAD */
 }
