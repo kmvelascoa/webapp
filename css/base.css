@@ -144,9 +144,12 @@ p {
   color: var(--accent);
 }
 
-table {
+.tablepractica {
   display: block;
   margin: auto;
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #e2f8c0;
 }
 
 td:nth-child(even) {
