@@ -1,0 +1,51 @@
+/* Default Theme - Purple */
+:root {
+  --black: hsla(318, 15%, 10%, 0.97);
+  --white: hsla(291, 20%, 95%, 0.97);
+
+  --background: hsla(318, 58%, 38%, 1); /* #9B2978 */
+  --foreground: hsla(50, 90%, 36%, 1); /* #B39909 */
+
+  --card: hsla(303, 50%, 43%, 0.9); /* #A6369F */
+  --card-foreground: hsla(50, 100%, 54%, 0.9); /* #FFDC19 */
+
+  --popover: hsla(303, 47%, 39%, 0.8); /* #963590 */
+  --popover-foreground: hsla(213, 100%, 35%, 0.8); /* #0050B3 */
+
+  --primary: hsla(307, 45%, 50%, 0.75); /* #B946AB */
+  --primary-foreground: hsla(22, 90%, 36%, 0.75); /* #B34A09 */
+
+  --secondary: hsla(291, 46%, 42%, 0.69); /* #923AA0 */
+  --secondary-foreground: hsla(22, 100%, 54%, 0.69); /* #FF7119 */
+
+  --muted: hsla(307, 45%, 50%, 0.75); /* #B946AB */
+  --muted-foreground: hsla(318, 58%, 38%, 1); /* #9B2978 */
+
+  --accent: hsla(291, 46%, 42%, 0.69); /* #923AA0 */
+  --accent-foreground: hsla(50, 100%, 54%, 0.9); /* #FFDC19 */
+
+  --destructive: hsla(318, 58%, 38%, 1); /* #9B2978 */
+  --destructive-foreground: hsla(213, 100%, 35%, 0.8); /* #0050B3 */
+
+  --border: hsla(318, 58%, 38%, 1); /* #9B2978 */
+  --input: hsla(318, 58%, 38%, 1); /* #9B2978 */
+  --ring: hsla(307, 45%, 50%, 0.75); /* #B946AB */
+}
+
+/* Button Styling */
+.theme-toggle-button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  background-color: var(--foreground);
+  color: var(--background);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.theme-toggle-button:before {
+  content: "🌞"; /* Light mode icon */
+}
+
+#theme-toggle:checked + .theme-toggle-button:before {
+  content: "🌜"; /* Dark mode icon */
+}

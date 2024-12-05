@@ -1,0 +1,70 @@
+/* ruvebal.art themes by @ruvebal © 2024 * /
+/* Default Mode */
+/* My Tyrian Purple Mode */
+:root {
+  --toggle-shape: "\25D0"; /* Unicode for filled triangle */
+
+  --black: hsla(318, 15%, 10%, 0.97);
+  --white: hsla(291, 20%, 95%, 0.97);
+
+  --background: hsla(307, 45%, 50%, 0.75); /* #B946AB */
+  --foreground: hsla(50, 100%, 54%, 0.9); /* #FFDC19 */
+
+  --card: hsla(303, 50%, 43%, 0.9); /* #A6369F */
+  --card-foreground: hsla(22, 90%, 36%, 0.75); /* #B34A09 */
+
+  --popover: hsla(303, 47%, 39%, 0.8); /* #963590 */
+  --popover-foreground: hsla(50, 90%, 36%, 1); /* #B39909 */
+
+  --primary: hsla(318, 58%, 38%, 1); /* #9B2978 */
+  --primary-foreground: hsla(213, 100%, 35%, 0.8); /* #0050B3 */
+
+  --secondary: hsla(291, 46%, 42%, 0.69); /* #923AA0 */
+  --secondary-foreground: hsla(22, 100%, 54%, 0.69); /* #FF7119 */
+
+  --muted: hsla(307, 45%, 50%, 0.75); /* #B946AB */
+  --muted-foreground: hsla(318, 58%, 38%, 1); /* #9B2978 */
+
+  --accent: hsla(291, 46%, 42%, 0.69); /* #923AA0 */
+  --accent-foreground: hsla(50, 100%, 54%, 0.9); /* #FFDC19 */
+
+  --destructive: hsla(318, 58%, 38%, 1); /* #9B2978 */
+  --destructive-foreground: hsla(213, 100%, 35%, 0.8); /* #0050B3 */
+
+  --border: hsla(318, 58%, 38%, 1); /* #9B2978 */
+  --input: hsla(318, 58%, 38%, 1); /* #9B2978 */
+  --ring: hsla(307, 45%, 50%, 0.75); /* #B946AB */
+}
+
+/* Dark Mode */
+.dark,
+:root[class~="dark"] {
+  /* Custom color palette */
+  --background: hsla(209, 12%, 22%, 1); /* #323B42 */
+  --foreground: hsla(50, 25%, 98%, 1); /* #FCFBF9 */
+
+  --card: hsla(24, 29%, 80%, 0.7); /* #D9C7BE */
+  --card-foreground: hsla(209, 12%, 22%, 1); /* #323B42 */
+
+  --popover: hsla(24, 29%, 80%, 1); /* #D9C7BE */
+  --popover-foreground: hsla(209, 12%, 22%, 1); /* #323B42 */
+
+  --primary: hsla(16, 5%, 39%, 1); /* #635B58 */
+  --primary-foreground: hsla(50, 25%, 98%, 1); /* #FCFBF9 */
+
+  --secondary: hsla(28, 13%, 61%, 1); /* #A59B95 */
+  --secondary-foreground: hsla(209, 12%, 22%, 1); /* #323B42 */
+
+  --muted: hsla(24, 6%, 48%, 1); /* #8C817B */
+  --muted-foreground: hsla(50, 25%, 98%, 1); /* #FCFBF9 */
+
+  --accent: hsla(28, 12%, 68%, 1); /* #B5A79F */
+  --accent-foreground: hsla(16, 5%, 39%, 1); /* #635B58 */
+
+  --destructive: hsla(10, 12%, 21%, 1); /* #3B3634 */
+  --destructive-foreground: hsla(50, 25%, 98%, 1); /* #FCFBF9 */
+
+  --border: hsla(28, 13%, 61%, 1); /* #A59B95 */
+  --input: hsla(28, 12%, 68%, 1); /* #B5A79F */
+  --ring: hsla(209, 12%, 22%, 1); /* #323B42 */
+}
