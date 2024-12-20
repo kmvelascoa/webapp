@@ -1,46 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio</title>
+  <link rel="stylesheet" href="css/portfolio.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo"><a href="#landing">Karol Velasco</a></div>
+    <nav class="nav">
+      <ul>
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#portfolio">Portafolio</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </aside>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Webs con valores de diseño</title>
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Landing Section (parte del scroll) -->
+    <section id="landing" class="landing">
+      <h1>Bienvenido a mi portafolio</h1>
+      <p>Explora mis obras y conecta conmigo.</p>
+      <a href="#about" class="btn">Comenzar</a>
+    </section>
 
-        <link rel="stylesheet" href="./css/index.css" />
+    <!-- About Section -->
+    <section id="about" class="about">
+      <h2>Sobre mí</h2>
+      <p>
+        ¡Bienvenido a mi mundo creativo! Soy una artista apasionada por explorar y expresar emociones a través de mi arte.
+      </p>
+    </section>
 
-<link rel="icon" type="image/png" href="./assets/favicon/favicon-48x48.png" sizes="48x48" />
-<link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
-<link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
-<meta name="apple-mobile-web-app-title" content="MyWebSite" />
-<link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+      <h2>Portafolio</h2>
+      <div class="grid-container">
+        <div class="grid-item"><img src="assets/img1.jpg" alt="Obra 1"></div>
+        <div class="grid-item"><img src="assets/img2.jpg" alt="Obra 2"></div>
+        <div class="grid-item"><img src="assets/img3.jpg" alt="Obra 3"></div>
+        <div class="grid-item"><img src="assets/img4.jpg" alt="Obra 4"></div>
+      </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <h2>Contacto</h2>
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" placeholder="Tu mensaje" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn">Enviar mensaje</button>
+      </form>
+    </section>
+  </main>
 
-
-    </head>
-
-    <body>
-
-        <header>
-            <div class="header-content">
-                <h1>Nuevas tendencias en Diseño Web</h1> 
-                <h3>Karol Velasco</h3>
-            </div>
-        </header>
-
-        <!-- Main Content Area with Grid Layout -->
-        <main>
-            <div>
-                <h1 style="text-align: center;">Webs destacables</h1>
-                
-            </div>
-        </main>
-        
-
-    </body>
-    <footer>
-        <p>&copy; 2024 UDIT. Todos los derechos reservados.</p>
-    </footer>
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 Karol Velasco. Todos los derechos reservados.</p>
+  </footer>
+</body>
 </html>
