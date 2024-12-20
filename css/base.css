@@ -39,7 +39,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.3em;
+  font-size: 2em;
   text-decoration: none; 
   color: black;
 }
@@ -81,8 +81,8 @@ cite {
 }
 
 p {
-  font-size: 0.7em;
-  line-height: 1.5;
+  font-size: 1em;
+  line-height: 1.5em; 
   margin: 15px 0;
 }
 
@@ -146,14 +146,97 @@ p {
   color: var(--accent);
 }
 
-.tablepractica {
-  display: block;
-  margin: auto;
+/* General styles for tables */
+table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #e2f8c0;
 }
 
-td:nth-child(even) {
-  background-color: var(--accent); /* #9DDBAD */
+td {
+  width: 50%;
+  text-align: center;
+  padding: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* General styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.center-text {
+  text-align: center;
+}
+
+/* Header styles */
+header {
+  background-color: #040403; /* Negro casi puro */
+  color: #C3E8BD; 
+  padding: 20px;
+  text-align: center;
+}
+
+
+header h1 {
+  font-size: 2.5em;
+}
+
+header h3 {
+  font-size: 1.2em;
+  color: #C3E8BD; 
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 50px;
+}
+
+table .table-cell {
+  width: 50%;
+}
+
+/* Background colors for the tables */
+.tablepractica:nth-child(odd) {
+  background-color: #C3E8BD; /* Verde claro */
+}
+
+.tablepractica:nth-child(even) {
+  background-color: #8DAB7F
+}
+
+/* Links and images */
+table a {
+  text-decoration: none;
+  color: inherit;
+}
+
+table img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Footer styles */
+footer {
+  background-color: #040403; /* Negro casi puro */
+  color: #C3E8BD; 
+  padding: 20px;
+  position: relative;
+  width: 100%;
+  bottom: 0;
 }
