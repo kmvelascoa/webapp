@@ -1,0 +1,310 @@
+/* Basic reset for consistent margins and paddings */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main body styling */
+body {
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--foreground);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Header and Footer styling */
+header,
+footer {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  padding: 20px;
+  width: 100%;
+}
+
+header {
+  margin-bottom: 30px;
+  padding: 20px 40px;
+  background-color: var(--secondary);
+}
+
+h1 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 2em;
+  text-decoration: none; 
+  color: black;
+}
+
+h3,
+h4 {
+  color: var(--primary-foreground);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+article {
+  margin-bottom: 40px;
+  background-color: var(--card);
+  padding: 20px 40px;
+  border-radius: 10px;
+  color: var(--card-foreground);
+}
+
+blockquote {
+  background-color: var(--muted);
+  border-left: 10px solid var(--primary);
+  margin: 20px 0;
+  padding: 10px 20px;
+}
+
+cite {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: var(--primary);
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.5em; 
+  margin: 15px 0;
+}
+
+.highlight {
+  color: var(--primary);
+}
+
+.header-container h1 {
+  font-size: 1.3em;
+  color: var(--destructive);
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.toc {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.toc a {
+  margin: 0 10px;
+  padding: 10px 20px;
+  background-color: var(--muted);
+  border-radius: 5px;
+  color: var(--foreground);
+  text-decoration: none;
+}
+
+.toc a:hover {
+  background-color: var(--primary);
+}
+
+.final-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: var(--muted);
+  color: var(--foreground);
+}
+
+.final-section a {
+  display: block;
+  margin: 10px 0;
+  color: var(--foreground);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.final-section a:hover {
+  color: var(--accent);
+}
+
+/* General styles for tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  width: 50%;
+  text-align: center;
+  padding: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* General styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.center-text {
+  text-align: center;
+}
+
+/* Header styles */
+header {
+  background-color: #040403; /* Negro casi puro */
+  color: #C3E8BD; 
+  padding: 20px;
+  text-align: center;
+}
+
+
+header h1 {
+  font-size: 2.5em;
+}
+
+header h3 {
+  font-size: 1.2em;
+  color: #C3E8BD; 
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 50px;
+}
+
+table .table-cell {
+  width: 50%;
+}
+
+/* Background colors for the tables */
+.tablepractica:nth-child(odd) {
+  background-color: #C3E8BD; /* Verde claro */
+}
+
+.tablepractica:nth-child(even) {
+  background-color: #8DAB7F
+}
+
+/* Links and images */
+table a {
+  text-decoration: none;
+  color: inherit;
+}
+
+table img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Footer styles */
+footer {
+  background-color: #040403; /* Negro casi puro */
+  color: #C3E8BD; 
+  padding: 20px;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
+
+:root {
+  --toggle-shape: "\25D0"; /* Unicode for filled triangle */
+
+  --black: hsla(318, 15%, 10%, 0.97);
+  --white: hsla(291, 20%, 95%, 0.97);
+
+  --background: hsla(107, 28%, 47%, 0.75); /* #8DAB7F */
+  --foreground: hsla(120, 100%, 7%, 0.97); /* #040403 */
+
+  --card: hsla(107, 28%, 47%, 0.75); /* #8DAB7F */
+  --card-foreground: hsla(120, 100%, 7%, 0.97); /* #040403 */
+
+  --popover: hsla(120, 19%, 30%, 0.5); /* #5B7553 */
+  --popover-foreground: hsla(60, 100%, 87%, 1); /* #e2f8c0 */
+
+  --primary: hsla(107, 18%, 31%, 1); /* #5B7553 */
+  --primary-foreground: hsla(60, 100%, 87%, 1); /* #e2f8c0 */
+
+  --secondary: hsla(107, 28%, 27%, 0.75); /* #394032 */
+  --secondary-foreground: hsla(60, 100%, 87%, 1); /* #e2f8c0 */
+
+  --muted: hsla(0, 0%, 92%, 1); /* #eaeaea */
+  --muted-foreground: hsla(107, 18%, 31%, 1); /* #5B7553 */
+
+  --accent: hsla(115, 27%, 66%, 1); /* #8EB897 */
+  --accent-foreground: hsla(120, 100%, 7%, 0.97); /* #040403 */
+
+  --destructive: hsla(318, 58%, 38%, 1); /* #9B2978 */
+  --destructive-foreground: hsla(213, 100%, 35%, 0.8); /* #0050B3 */
+
+  --border: hsla(318, 58%, 38%, 1); /* #9B2978 */
+  --input: hsla(318, 58%, 38%, 1); /* #9B2978 */
+  --ring: hsla(107, 28%, 47%, 0.75); /* #8DAB7F */
+}
+
+/* Dark Mode */
+.dark,
+:root[class~="dark"] {
+  /* Custom color palette for dark mode */
+  --background: hsla(209, 12%, 22%, 1); /* #323B42 */
+  --foreground: hsla(50, 25%, 98%, 1); /* #FCFBF9 */
+
+  --card: hsla(24, 29%, 80%, 0.7); /* #D9C7BE */
+  --card-foreground: hsla(209, 12%, 22%, 1); /* #323B42 */
+
+  --popover: hsla(24, 29%, 80%, 1); /* #D9C7BE */
+  --popover-foreground: hsla(209, 12%, 22%, 1); /* #323B42 */
+
+  --primary: hsla(16, 5%, 39%, 1); /* #635B58 */
+  --primary-foreground: hsla(50, 25%, 98%, 1); /* #FCFBF9 */
+
+  --secondary: hsla(28, 13%, 61%, 1); /* #A59B95 */
+  --secondary-foreground: hsla(209, 12%, 22%, 1); /* #323B42 */
+
+  --muted: hsla(24, 6%, 48%, 1); /* #8C817B */
+  --muted-foreground: hsla(50, 25%, 98%, 1); /* #FCFBF9 */
+
+  --accent: hsla(28, 12%, 68%, 1); /* #B5A79F */
+  --accent-foreground: hsla(16, 5%, 39%, 1); /* #635B58 */
+
+  --destructive: hsla(10, 12%, 21%, 1); /* #3B3634 */
+  --destructive-foreground: hsla(50, 25%, 98%, 1); /* #FCFBF9 */
+
+  --border: hsla(28, 13%, 61%, 1); /* #A59B95 */
+  --input: hsla(28, 12%, 68%, 1); /* #B5A79F */
+  --ring: hsla(209, 12%, 22%, 1); /* #323B42 */
+}
