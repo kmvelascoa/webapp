@@ -10,8 +10,9 @@ html {
     display: flex;
     color: var(--color-text);
     background-color: var(--color-background);
-    height: 100%;
     flex-direction: column;
+    position: relative; /* Necesario para que los elementos absolutos se posicionen correctamente */
+    height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
   }
   
   /* Sidebar */
@@ -88,6 +89,7 @@ html {
   
   /* Main Content */
   .main-content {
+    text-align: center;
     margin-left: 250px; 
     padding: 20px;
     width: calc(100% - 250px); /* Resta el ancho de la barra lateral */
@@ -108,7 +110,7 @@ html {
   }
   
   .landing h1 {
-    font-size: 4rem;
+    font-size: 6rem;
     margin-bottom: 10px;
     font-weight: bold;
   }
@@ -139,7 +141,42 @@ html {
     background-color: var(--color-landing-button-hover);
     color: var(--color-landing-button-text-hover);
   }
-  
+
+  .vector-animation {
+    position: absolute; /* Cambia a posición absoluta */
+    top: 0; /* Alinea al borde superior */
+    right: 0; /* Alinea al borde derecho */
+    /* Si deseas agregar un margen desde la esquina, puedes usar margin o padding */
+}
+
+.vector-animation img {
+  transition: transform 0.3s ease, filter 0.3s ease; /* Transiciones suaves para transformaciones y filtros */
+}
+
+.vector-animation img:hover {
+  transform: scale(1.1); /* Aumenta el tamaño al pasar el ratón */
+}
+
+.vector-animation-left {
+  position: absolute; /* Cambia a posición absoluta */
+  top: 0; /* Alinea al borde superior */
+  left: 0; /* Alinea al borde izquierdo */
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  width: auto; /* Mantiene el ancho automático para evitar distorsiones */
+  margin-left: 250px; /* Elimina márgenes para que ocupe toda la altura */
+}
+
+.vector-animation-left img {
+  height: 100%; /* Asegura que la imagen ocupe toda la altura del contenedor */
+  width: auto; /* Mantiene el aspecto del SVG */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Transiciones suaves para transformaciones y filtros */
+}
+
+.vector-animation-left img:hover {
+  transform: scale(1.1); /* Aumenta el tamaño al pasar el ratón */
+}
+
+
   /* Secciones */
   .about, .portfolio, .contact {
     margin-left: 250px; /* Ancho de la barra lateral */
