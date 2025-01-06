@@ -14,21 +14,53 @@
   transform: scale(1.1); /* Aumenta el tamaño al pasar el ratón */
 }
 
-.vector-animation-left {
-  position: absolute; /* Cambia a posición absoluta */
-  top: 0; /* Alinea al borde superior */
-  left: 0; /* Alinea al borde izquierdo */
-  height: 100vh; /* Ocupa toda la altura de la ventana */
-  width: auto; /* Mantiene el ancho automático para evitar distorsiones */
-  margin-left: 250px; /* Elimina márgenes para que ocupe toda la altura */
+
+.vector-animation-top {
+  position: absolute; /* Posiciona el vector de forma absoluta */
+  top: 0; /* Mantiene el vector en la parte superior */
+  left: -50px; /* Ajusta este valor para que el vector sobresalga del sidebar */
+  z-index: 10; /* Asegura que esté por encima de otros elementos */
+  pointer-events: none; /* Permite que los clics pasen a través del SVG */
 }
 
-.vector-animation-left img {
-  height: 100%; /* Asegura que la imagen ocupe toda la altura del contenedor */
-  width: auto; /* Mantiene el aspecto del SVG */
-  transition: transform 0.3s ease, filter 0.3s ease; /* Transiciones suaves para transformaciones y filtros */
+.vector-animation-top img {
+  width: 800px; /* Ajusta este valor para aumentar el tamaño del SVG */
+  height: auto; /* Mantiene la proporción de la imagen */
+  transition: transform 0.3s ease; /* Suaviza la animación */
 }
 
-.vector-animation-left img:hover {
-  transform: scale(1.1); /* Aumenta el tamaño al pasar el ratón */
+.vector-animation-top img:hover {
+  transform: scale(1.1); /* Aumenta el tamaño al 110% cuando se pasa el mouse */
+}
+ 
+
+/* Vector Animation Bottom Left */
+.vector-animation-bottom-left {
+  position: absolute; /* Posiciona el vector de forma absoluta */
+  bottom: 0; /* Mantiene el vector en la parte inferior */
+  left: -400px; /* Ajusta este valor para que el vector sobresalga del sidebar */
+  z-index: 10; /* Asegura que esté por encima de otros elementos */
+  pointer-events: none; /* Permite que los clics pasen a través del SVG */
+}
+
+.vector-animation-bottom-left img {
+  width: 900px; /* Ajusta este valor para aumentar el tamaño del SVG */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.vector-animation-bottom-left img:hover {
+  transform: scale(1.1); /* Aumenta el tamaño al 110% cuando se pasa el mouse */
+}
+
+.vector-animation-bottom-right {
+  position: absolute; /* Posiciona el vector de forma absoluta */
+  bottom: 0; /* Mantiene el vector en la parte inferior */
+  right: 0px; /* Ajusta este valor para que el vector sobresalga del contenedor */
+  z-index: 10; /* Asegura que esté por encima de otros elementos */
+}
+
+.vector-animation-bottom-right img {
+  width: 550px; /* Ajusta este valor para aumentar el tamaño del SVG */
+  height: auto; /* Mantiene la proporción de la imagen */
+  transition: transform 0.3s ease; /* Suaviza la animación */
 }

@@ -83,7 +83,7 @@ html {
   }
   
   .social-icons img:hover {
-    transform: scale(1.1);
+    transform: scale(1.3);
   }
   
   
@@ -155,7 +155,12 @@ html {
     box-sizing: border-box;
     user-select: none; /* Evita la selección de texto en estas secciones */
   }
-  
+
+  .about h2, .portfolio h2, .contact h2 {
+    font-size: 5rem;
+    margin-bottom: 20px;
+  }
+
   section {
     height: 100vh; /* Asegura que cada sección ocupe toda la altura de la ventana */
     display: flex;
@@ -170,11 +175,53 @@ html {
   }
   
   /* About Section */
-  .about h2, .portfolio h2, .contact h2 {
-    font-size: 5rem;
-    margin-bottom: 20px;
+  .about {
+    margin-left: 220px; /* Deja espacio para el sidebar */
+    padding: 20px; /* Espaciado interno */
+    font-size: 1.3rem;
+
+}
+
+.about-content {
+    display: flex; /* Alinea los elementos uno al lado del otro */
+    align-items: center; /* Centra verticalmente los elementos */
+    
+}
+
+.avatar {
+    flex: 1; /* Toma un espacio proporcional */
+    text-align: left; /* Centra el contenido dentro del div */
+}
+
+.avatar img {
+    width: 600px; /* Ajusta el tamaño del avatar */
+    height: auto; /* Mantiene la proporción de la imagen */
+    transition: transform 0.3s ease, filter 0.3s ease;
   }
   
+  .avatar img:hover {
+      transform: scale(1.1); /* Aumenta el tamaño al 110% cuando se pasa el mouse */
+  }
+
+
+.about-text {
+  flex: 2; /* Toma más espacio proporcional que el avatar */
+  padding-left: 20px; /* Espacio entre el avatar y el texto */
+  padding-right: 20px; /* Espacio a la derecha */
+  padding-top: 30px; /* Espacio en la parte superior */
+  padding-bottom: 30px; /* Espacio en la parte inferior */
+  max-width: 600px; /* Establece un ancho máximo para el cuadro de texto */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+.about-text h2 {
+  margin-bottom: 30px; /* Espacio entre el título y el primer párrafo */
+}
+
+.about-text p {
+  margin: 10px 0; /* Espaciado entre párrafos */
+}
+
   /* Portfolio Section */
   .portfolio .grid-container {
     height: 100vh;
@@ -213,6 +260,17 @@ html {
   flex: 0 0 auto; /* Permite que los elementos ocupen solo el espacio necesario */
   width: 300px; /* Ajusta el ancho según tus necesidades */
   margin-right: 20px; /* Espacio entre los elementos */
+  overflow: hidden; /* Asegura que no se sobresalga el contenido */
+}
+
+.carousel-item img {
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  transition: transform 0.3s ease; /* Suaviza la animación */
+}
+
+.carousel-item img:hover {
+  transform: scale(1.1); /* Aumenta el tamaño al 110% cuando se pasa el mouse */
 }
 
 .carousel img {
@@ -227,7 +285,7 @@ html {
 }
 
 .carousel-control {
-  color: #E24031; /* Color del texto */
+  color: var(--carousel-text-color); /* Color del texto */
   border: none; /* Sin borde */
   width: 40px; /* Ancho del botón */
   height: 40px; /* Altura del botón */
@@ -237,13 +295,21 @@ html {
 }
 
 .carousel-control:hover {
-  background-color: #EEB8C3; /* Color de fondo al pasar el ratón */
+  background-color: var(--carousel-hover-bg-color); /* Color de fondo al pasar el ratón */
 }
 
 
   /* Contact Section */
+  .contact {
+    margin-left: 250px; /* Deja espacio para el sidebar */
+    height: 100vh;
+    margin-left: 250px; /* Deja espacio para el sidebar */
+    padding: 20px; /* Espaciado interno */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    position: relative; /* Necesario para que los elementos absolutos se posicionen correctamente */
+}
   .contact-form {
-    max-width: 600px;
+    max-width: 1000px;
     text-align: left; /* Alinea todo el texto a la izquierda */
 
   }
@@ -258,6 +324,8 @@ html {
     padding: 10px;
     border-color: var(--color-form-border);
     border-radius: 5px;
+    font-family: inherit; 
+    font-size: inherit; 
   }
   
   .contact-form .btn {
@@ -265,19 +333,24 @@ html {
     color: var(--color-form-button-text);
     padding: 10px 20px;
     border: none;
+    font-family: inherit; 
+    font-size: inherit; 
   }
   
   .contact-form .btn:hover {
     background-color: var(--color-form-button-hover);
     }
   
-  /* Footer */
-  footer {
-    margin-left: 250px; /* Ancho de la barra lateral */
-    margin-top: auto;
-    text-align: center;
-    background-color: var(--color-footer-background);
-    color: var(--color-footer-text);
-    padding: 10px;
-  }
-  
+ /* Footer */
+footer {
+  position: relative; /* O usa absolute si es necesario */
+  left: 0; /* Alinea el footer al borde izquierdo */
+  text-align: center;
+  background-color: var(--color-footer-background);
+  color: var(--color-footer-text);
+  padding: 10px;
+}
+
+footer p {
+  margin-left: 250px; /* Elimina el margen por defecto del párrafo */
+}
