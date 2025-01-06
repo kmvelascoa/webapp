@@ -15,7 +15,7 @@
   --color-landing-button-hover:#EEB8C3;
 
   --color-landing-button-text-hover: #f5f5f5;
-  
+
   --carousel-text-color: #E24031;
   --carousel-hover-bg-color: #EEB8C3;
 
@@ -34,33 +34,33 @@
 .dark,
 :root[class~="dark"] {
   /* Colores principales */
-  --color-background: #1a1a1a; /* Fondo oscuro */
-  --color-text: #ff6b5b; /* Texto claro */
-  --color-sidebar: #2a2a2a; /* Fondo de la barra lateral */
-  --color-sidebar-text: #ffffff; /* Texto de la barra lateral */
+  --color-background: #1a1a1a;  
+  --color-text: #ff6b5b;  
+  --color-sidebar: #2a2a2a;  
+  --color-sidebar-text: #ffffff;  
 
   /* Colores de acento */
-  --color-accent: #ff8c9d; /* Color de acento oscuro */
-  --color-accent-hover: #ff8c9d; /* Color de acento al pasar el ratón */
+  --color-accent: #ff8c9d;  
+  --color-accent-hover: #ff8c9d;  
 
   /* Colores de navegación */
-  --color-nav-text: #ff6b5b; /* Texto de navegación */
+  --color-nav-text: #ff6b5b;  
 
   /* Colores de secciones */
-  --color-landing-background: #1a1a1a; /* Fondo oscuro para landing */
-  --color-landing-text: #ff6b5b; /* Texto claro en landing */
-  --color-landing-button-border: #ff6b5b; /* Borde del botón en landing */
-  --color-landing-button-hover: #ff8c9d; /* Color del botón al pasar el ratón */
+  --color-landing-background: #1a1a1a;  
+  --color-landing-text: #ff6b5b;  
+  --color-landing-button-border: #ff6b5b; 
+  --color-landing-button-hover: #ff8c9d;  
 
-  --color-landing-button-text-hover: #1a1a1a; /* Texto del botón al pasar el ratón */
+  --color-landing-button-text-hover: #1a1a1a;  
 
   /* Colores de formulario */
-  --color-form-border: #ff6b5b; /* Borde del formulario */
-  --color-form-button: #ff8c9d; /* Botón del formulario */
-  --color-form-button-text: #ffffff; /* Texto del botón del formulario */
-  --color-form-button-hover: #ff6b5b; /* Botón del formulario al pasar el ratón */
+  --color-form-border: #ff6b5b;  
+  --color-form-button: #ff8c9d;  
+  --color-form-button-text: #ffffff; 
+  --color-form-button-hover: #ff6b5b;  
 
   /* Colores de footer */
-  --color-footer-background: #1a1a1a; /* Fondo oscuro del footer */
-  --color-footer-text: #ff6b5b; /* Texto claro en el footer */
+  --color-footer-background: #1a1a1a;  
+  --color-footer-text: #ff6b5b;  
 }

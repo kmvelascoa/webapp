@@ -6,79 +6,79 @@
 }
 
 body {
-    margin: 0; /* Elimina márgenes por defecto */
-    font-family: 'Montserrat', sans-serif; /* Fuente utilizada */
-    background-color: var(--color-background); /* Color de fondo */
-    color: var(--color-text); /* Color del texto */
+    margin: 0; 
+    font-family: 'Coolvetica', sans-serif;
+    background-color: var(--color-background); 
+    color: var(--color-text);  
     display: flex; /* Flexbox para centrar contenido */
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    height: 100vh; /* Altura completa de la ventana */
+    justify-content: center;  
+    align-items: center;  
+    height: 100vh;  
 }
 
 .container {
-    text-align: center; /* Centrar texto dentro del contenedor */
+    text-align: center;  
 }
 
 h1 {
-    font-size: 5rem; /* Tamaño del título principal */
-    margin: 0; /* Sin margen */
+    font-size: 5rem;  
+    margin: 0; 
 }
 
 p {
-    font-size: 1.5rem; /* Tamaño del párrafo */
-    margin: 20px 0; /* Margen superior e inferior */
+    font-size: 1.5rem;  
+    margin: 20px 0;  
 }
 
 a {
     display: inline-block; /* Mostrar como bloque en línea */
-    margin-top: 20px; /* Margen superior */
-    padding: 10px 20px; /* Espaciado interno del botón */
-    color: var(--color-text); /* Color del texto del enlace */
+    margin-top: 20px;  
+    padding: 10px 20px;  
+    color: var(--color-text);  
     text-decoration: none; /* Sin subrayado en el texto */
-    border: 2px solid var(--color-accent); /* Borde del botón */
+    border: 2px solid var(--color-accent);  
     border-radius: 5px; /* Bordes redondeados */
-    background-color: var(--color-accent); /* Color de fondo del botón */
+    background-color: var(--color-accent);  
     transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave al pasar el ratón */
 }
 
 a:hover {
-    background-color: var(--color-accent-hover); /* Color de fondo al pasar el ratón */
-    color: var(--color-background); /* Color del texto al pasar el ratón */
+    background-color: var(--color-accent-hover);  
+    color: var(--color-background);  
 }
 
 
 .vector-animation {
     position: absolute; /* Cambia a posición absoluta */
-    top: 0; /* Alinea al borde superior */
-    right: 0; /* Alinea al borde derecho */
+    top: 0;  
+    right: 0;  
  }
 
 .vector-animation img {
-    width: 600px; /* Ajusta este valor para aumentar el tamaño del SVG */
+    width: 600px;  
     height: auto; /* Mantiene la proporción de la imagen */
-    transition: transform 0.3s ease; /* Suaviza la animación */
+    transition: transform 0.3s ease;  
 }
 
 .vector-animation img:hover {
-    transform: scale(1.1); /* Aumenta el tamaño al pasar el ratón */
+    transform: scale(1.1);  
 }
 
 
 .vector-animation-top {
   position: absolute; /* Posiciona el vector de forma absoluta */
-  top: 0; /* Mantiene el vector en la parte superior */
-  left: 0px; /* Ajusta este valor para que el vector sobresalga del sidebar */
+  top: 0;  
+  left: 0px;  
 }
 
 .vector-animation-top img {
-  width: 600px; /* Ajusta este valor para aumentar el tamaño del SVG */
-  height: auto; /* Mantiene la proporción de la imagen */
-  transition: transform 0.3s ease; /* Suaviza la animación */
+  width: 600px;  
+  height: auto;   
+  transition: transform 0.3s ease;  
 }
 
 .vector-animation-top img:hover {
-  transform: scale(1.1); /* Aumenta el tamaño al 110% cuando se pasa el mouse */
+  transform: scale(1.1); 
 }
  
  
