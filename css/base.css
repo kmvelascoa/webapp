@@ -4,12 +4,12 @@ html {
   }
   
   body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Coolvetica', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
-    color: #333;
-    background-color: #F9F9F9;
+    color: var(--color-text);
+    background-color: var(--color-background);
     height: 100%;
     flex-direction: column;
   }
@@ -17,8 +17,8 @@ html {
   /* Sidebar */
   .sidebar {
     width: 250px;
-    background-color: #040403;
-    color: white;
+    background-color: var(--color-sidebar);
+    color: var(--color-sidebar-text);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,13 +27,18 @@ html {
     top: 0;
     left: 0;
     height: 100vh;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
   }
   
   .sidebar .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
     margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .sidebar .logo img {
+    max-width: 100%;
+    height: auto;
+    max-height: 80px; 
   }
   
   .nav ul {
@@ -49,8 +54,8 @@ html {
   }
   
   .nav ul li a {
-    color: white;
     text-decoration: none;
+    color: var(--color-nav-text);
     font-size: 1.2rem;
     display: block;
     padding: 10px;
@@ -58,53 +63,96 @@ html {
   }
   
   .nav ul li a:hover {
-    background-color: #8EB897;
-    color: #040403;
+    background-color: var(--color-accent);
+    color: var(--color-sidebar);
   }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: auto; /* Empuja los iconos al fondo */
+    padding-bottom: 20px;
+  }
+  
+  .social-icons img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icons img:hover {
+    transform: scale(1.1);
+  }
+  
   
   /* Main Content */
   .main-content {
-    margin-left: 250px;
+    margin-left: 250px; 
     padding: 20px;
+    width: calc(100% - 250px); /* Resta el ancho de la barra lateral */
   }
   
   /* Landing Section */
   .landing {
-    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: var(--color-landing-background);
+  color: var(--color-landing-text);
+  }
+  
+  .landing-content {
     text-align: center;
-    background-color: #2f2f25;
-    color: #fff;
   }
   
   .landing h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    font-size: 4rem;
+    margin-bottom: 10px;
+    font-weight: bold;
   }
   
   .landing p {
     font-size: 1.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .landing-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
   }
   
   .landing .btn {
     padding: 10px 20px;
-    font-size: 1.2rem;
-    color: #fff;
-    background-color: #8EB897;
+    font-size: 1rem;
+    color: var(--color-landing-text);
+    border-color: var(--color-landing-button-border);
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border: 2px solid;
+    border-radius: 0;
+    transition: all 0.3s ease;
   }
   
   .landing .btn:hover {
-    background-color: #5B7553;
+    background-color: var(--color-landing-button-hover);
+    color: var(--color-landing-button-text-hover);
   }
   
   /* Secciones */
+  .about, .portfolio, .contact {
+    margin-left: 250px; /* Ancho de la barra lateral */
+    padding: 50px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    user-select: none; /* Evita la selección de texto en estas secciones */
+  }
+  
   section {
     height: 100vh; /* Asegura que cada sección ocupe toda la altura de la ventana */
     display: flex;
@@ -113,6 +161,7 @@ html {
     align-items: center;
     padding: 50px 20px;
     text-align: center;
+    box-sizing: border-box;
     margin-bottom: 0; /* Elimina el espacio adicional entre secciones */
     user-select: none; /* Evita la selección de texto en estas secciones */
   }
@@ -139,6 +188,8 @@ html {
   /* Contact Section */
   .contact-form {
     max-width: 600px;
+    text-align: left; /* Alinea todo el texto a la izquierda */
+
   }
   
   .contact-form .form-group {
@@ -149,27 +200,28 @@ html {
   .contact-form textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #8EB897;
+    border-color: var(--color-form-border);
     border-radius: 5px;
   }
   
   .contact-form .btn {
-    background-color: #8EB897;
-    color: white;
+    background-color: var(--color-form-button);
+    color: var(--color-form-button-text);
     padding: 10px 20px;
     border: none;
   }
   
   .contact-form .btn:hover {
-    background-color: #5B7553;
-  }
+    background-color: var(--color-form-button-hover);
+    }
   
   /* Footer */
   footer {
+    margin-left: 250px; /* Ancho de la barra lateral */
     margin-top: auto;
     text-align: center;
-    background-color: #040403;
-    color: white;
+    background-color: var(--color-footer-background);
+    color: var(--color-footer-text);
     padding: 10px;
   }
   

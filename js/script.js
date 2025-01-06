@@ -1,30 +1,25 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Select all elements with the .typewriter class
-    const typewriterElements = document.querySelectorAll('.typewriter');
+document.addEventListener("DOMContentLoaded", function() {
+    const darkModeToggle = document.getElementById('darkModeToggle');
 
-    if ('IntersectionObserver' in window) {
-        // Create a single observer instance with higher threshold
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    const element = entry.target;
-                    console.log(`Animating: ${element.id}`); // Log to confirm individual animation
+    // Asegúrate de que el botón exista antes de agregar el evento
+    if (darkModeToggle) {
+        darkModeToggle.addEventListener('click', function() {
+            document.documentElement.classList.toggle('dark');
 
-                    // Apply a staggered delay based on the element's index
-                    setTimeout(() => {
-                        element.classList.add('animate');
-                    }, index * 500); // Adjust delay as needed (e.g., 500ms per element)
+            // Guardar la preferencia del usuario
+            if (document.documentElement.classList.contains('dark')) {
+                localStorage.setItem('darkMode', 'enabled');
+                darkModeToggle.textContent = "Cambiar a Modo Claro"; // Cambiar texto del botón
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+                darkModeToggle.textContent = "Cambiar a Modo Oscuro"; // Cambiar texto del botón
+            }
+        });
+    }
 
-                    // Stop observing the element after animating
-                    observer.unobserve(element);
-                }
-            });
-        }, { threshold: 0.9 }); // Use a high threshold to require most of the element to be in view
-
-        // Observe each .typewriter element individually
-        typewriterElements.forEach(el => observer.observe(el));
-    } else {
-        // Fallback for unsupported browsers
-        typewriterElements.forEach(el => el.classList.add('animate'));
+    // Verificar la preferencia guardada al cargar la página
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        document.documentElement.classList.add('dark');
+        darkModeToggle.textContent = "Cambiar a Modo Claro"; // Cambiar texto del botón
     }
 });
