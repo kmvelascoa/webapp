@@ -1,25 +1,30 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const darkModeToggle = document.getElementById('darkModeToggle');
+    const carouselContainer = document.querySelector('.carousel-container');
+    const items = document.querySelectorAll('.carousel-item');
+    
+    let currentIndex = 0;
 
-    // Asegúrate de que el botón exista antes de agregar el evento
-    if (darkModeToggle) {
-        darkModeToggle.addEventListener('click', function() {
-            document.documentElement.classList.toggle('dark');
-
-            // Guardar la preferencia del usuario
-            if (document.documentElement.classList.contains('dark')) {
-                localStorage.setItem('darkMode', 'enabled');
-                darkModeToggle.textContent = "Cambiar a Modo Claro"; // Cambiar texto del botón
-            } else {
-                localStorage.setItem('darkMode', 'disabled');
-                darkModeToggle.textContent = "Cambiar a Modo Oscuro"; // Cambiar texto del botón
-            }
-        });
+    // Función para mostrar el elemento actual
+    function showItem(index) {
+        const itemWidth = items[0].offsetWidth + parseInt(getComputedStyle(items[0]).marginRight);
+        carouselContainer.style.transform = `translateX(${-index * itemWidth}px)`;
     }
 
-    // Verificar la preferencia guardada al cargar la página
-    if (localStorage.getItem('darkMode') === 'enabled') {
-        document.documentElement.classList.add('dark');
-        darkModeToggle.textContent = "Cambiar a Modo Claro"; // Cambiar texto del botón
-    }
+    // Evento para el botón "Next"
+    document.querySelector('.next').addEventListener('click', function() {
+        if (currentIndex < items.length - 1) {
+            currentIndex++;
+            showItem(currentIndex);
+        }
+    });
+
+    // Evento para el botón "Prev"
+    document.querySelector('.prev').addEventListener('click', function() {
+        if (currentIndex > 0) {
+            currentIndex--;
+            showItem(currentIndex);
+        }
+    });
+
+    showItem(currentIndex); // Muestra el primer elemento al cargar
 });
