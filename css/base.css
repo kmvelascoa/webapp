@@ -29,6 +29,7 @@ html {
     left: 0;
     height: 100vh;
     box-sizing: border-box;
+    
   }
   
   .sidebar .logo {
@@ -77,21 +78,25 @@ html {
     align-items: center;
     background-color: var(--color-landing-background);
   color: var(--color-landing-text);
+  z-index: 10;
   }
   
   .landing-content {
     text-align: center;
+    z-index: 10;
   }
   
   .landing h1 {
     font-size: 6rem;
     margin-bottom: 10px;
     font-weight: bold;
+    z-index: 10;
   }
   
   .landing p {
     font-size: 1.5rem;
     margin-bottom: 30px;
+    z-index: 10;
   }
   
   .landing-links {
@@ -282,15 +287,18 @@ html {
     padding: 20px;  
     box-sizing: border-box; /* Incluye padding y border en el ancho total */
     position: relative; /* Necesario para que los elementos absolutos se posicionen correctamente */
+    z-index: 10;
 }
   .contact-form {
     max-width: 1000px;
     text-align: left;  
+    z-index: 10;
 
   }
   
   .contact-form .form-group {
     margin-bottom: 20px;
+    z-index: 10;
   }
   
   .contact-form input,

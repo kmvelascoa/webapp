@@ -3,15 +3,18 @@
     position: absolute; /* Cambia a posición absoluta */
     top: 0; /* Alinea al borde superior */
     right: 0; /* Alinea al borde derecho */
+    z-index: 1;
     /* Si deseas agregar un margen desde la esquina, puedes usar margin o padding */
 }
 
 .vector-animation img {
   transition: transform 0.3s ease, filter 0.3s ease; /* Transiciones suaves para transformaciones y filtros */
+  z-index: 1;
 }
 
 .vector-animation img:hover {
   transform: scale(1.1); /* Aumenta el tamaño al pasar el ratón */
+  z-index: 1;
 }
 
 
@@ -21,16 +24,19 @@
   left: -50px; /* Ajusta este valor para que el vector sobresalga del sidebar */
   z-index: 10; /* Asegura que esté por encima de otros elementos */
   pointer-events: none; /* Permite que los clics pasen a través del SVG */
+  z-index: 1;
 }
 
 .vector-animation-top img {
   width: 800px; /* Ajusta este valor para aumentar el tamaño del SVG */
   height: auto; /* Mantiene la proporción de la imagen */
   transition: transform 0.3s ease; /* Suaviza la animación */
+  z-index: 1;
 }
 
 .vector-animation-top img:hover {
   transform: scale(1.1); /* Aumenta el tamaño al 110% cuando se pasa el mouse */
+  z-index: 1;
 }
  
 
@@ -39,24 +45,26 @@
   position: absolute; /* Posiciona el vector de forma absoluta */
   bottom: 0; /* Mantiene el vector en la parte inferior */
   left: -400px; /* Ajusta este valor para que el vector sobresalga del sidebar */
-  z-index: 10; /* Asegura que esté por encima de otros elementos */
+  z-index: 1; /* Asegura que esté por encima de otros elementos */
   pointer-events: none; /* Permite que los clics pasen a través del SVG */
 }
 
 .vector-animation-bottom-left img {
   width: 900px; /* Ajusta este valor para aumentar el tamaño del SVG */
   height: auto; /* Mantiene la proporción de la imagen */
+  z-index: 1;
 }
 
 .vector-animation-bottom-left img:hover {
   transform: scale(1.1); /* Aumenta el tamaño al 110% cuando se pasa el mouse */
+  z-index: 1;
 }
 
 .vector-animation-bottom-right {
   position: absolute; /* Posiciona el vector de forma absoluta */
   bottom: 0; /* Mantiene el vector en la parte inferior */
   right: 0px; /* Ajusta este valor para que el vector sobresalga del contenedor */
-  z-index: 10; /* Asegura que esté por encima de otros elementos */
+  z-index: 1; /* Asegura que esté por encima de otros elementos */
 }
 
 .vector-animation-bottom-right img {
